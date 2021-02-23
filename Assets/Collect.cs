@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Collect : MonoBehaviour
 {
     public string collecttag;
-
-
+    public Text scoredisplay;
+    int score = 0;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -14,6 +15,10 @@ public class Collect : MonoBehaviour
         {
 
             Destroy(collision.collider.gameObject);
+
+            score = score + 1;
+            scoredisplay.text = "Gems Collected: " + score;
+
         }
     }
 
