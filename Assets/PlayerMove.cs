@@ -22,7 +22,7 @@ public class PlayerMove : MonoBehaviour
     bool isGrounded; 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
