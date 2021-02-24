@@ -4,9 +4,19 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ResetGame : MonoBehaviour
+
+
+    
 {
-    // Start is called before the first frame update
-    void Start()
+
+
+
+
+
+    
+
+// Start is called before the first frame update
+void Start()
     {
         
     }
@@ -14,9 +24,9 @@ public class ResetGame : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.A))
+        if(transform.position.y<= 0)
         {
             SceneManager.LoadScene(0);
-        } 
+        }
     }
 }
