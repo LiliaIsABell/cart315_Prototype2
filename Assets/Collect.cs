@@ -35,6 +35,9 @@ public class Collect : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        if (score == 4)
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 }
